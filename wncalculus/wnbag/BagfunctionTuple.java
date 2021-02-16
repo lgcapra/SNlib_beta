@@ -25,13 +25,13 @@ public interface BagfunctionTuple extends SNfunctionTuple<LinearComb>, BagExpr {
         return new TupleBagTranspose(this);
     }
     
-    @Override
+    /*@Override
     default Class<BagfunctionTuple> bagType() {
-       return /*WNtuple.class*/type(); //a seconda che si usi TupleBag o TupleBag (scelta attuale)   
-    }
+       return type(); //a seconda che si usi TupleBag o BagfunctionTuple (scelta attuale)   
+    }*/
     
     @Override
-    default Class<BagfunctionTuple> type() {
+    default Class<? extends Expression> type() {
         return BagfunctionTuple.class;
     }
     

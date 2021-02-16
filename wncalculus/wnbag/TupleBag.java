@@ -4,6 +4,7 @@ import java.util.*;
 import wncalculus.bagexpr.AbstractBag;
 import wncalculus.bagexpr.Bag;
 import wncalculus.expr.Domain;
+import wncalculus.expr.ParametricExpr;
 import wncalculus.util.Util;
 
 /**
@@ -111,6 +112,11 @@ public final class TupleBag extends AbstractBag<BagfunctionTuple> implements Bag
       //NECESSARIO?
       Map.Entry<? extends BagfunctionTuple, Integer> e;
       return size() == 1 && (e = asMap().entrySet().iterator().next()) .getValue() == 1 ? e.getKey() : this;
+    }
+
+    @Override
+    public  Class<BagfunctionTuple> bagType() {
+        return BagfunctionTuple.class;
     }
    
 }

@@ -243,5 +243,10 @@ public interface Bag<E extends ParametricExpr> extends BagExpr, NonTerminal {
     default Bag<E> diff(Bag<E> b) {
         return sum(b,-1);
     }
-                 
+           
+    /**
+     * @return the bag's elements type 
+     */
+    <E extends ParametricExpr> Class<E> bagType();
+    
 }

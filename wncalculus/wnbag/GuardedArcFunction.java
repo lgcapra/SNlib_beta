@@ -76,12 +76,6 @@ public final class GuardedArcFunction implements BagfunctionTuple, GuardedExpr<B
         return this.expr;
     }
     
-    
-    @Override
-    public Class<BagfunctionTuple> type() {
-        return BagfunctionTuple.class;
-    }
-    
     @Override
     public String toString () {
         return GuardedExpr.super.toStringGuardedExpr() ;

@@ -13,10 +13,6 @@ import wncalculus.expr.*;
  */
 public interface BagExpr extends ParametricExpr, Transposable {
     
-    /**
-     * @return the bag's elements type 
-     */
-    <E extends ParametricExpr> Class<E> bagType();
     
     /** bag-builder method
      * @param m a map
